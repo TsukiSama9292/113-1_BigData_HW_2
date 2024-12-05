@@ -1,0 +1,22 @@
+x-default-opts: &default-opts
+  restart: unless-stopped
+  tty: true
+  stdin_open: true
+  privileged: false
+  ipc: private
+
+services:
+  pytorch:
+    <<: *default-opts
+    build: 
+      context: .
+      dockerfile: ./dockerfile
+    container_name: pytorch
+    volumes:
+      - ./ANNs:/workspace
+    networks:
+      network:
+
+networks:
+  network:
+    driver: bridge
