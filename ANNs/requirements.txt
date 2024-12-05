@@ -6,4 +6,3 @@ safetensors
 python-dotenv
 twstock
 matplotlib
-pickle
