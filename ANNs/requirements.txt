@@ -6,3 +6,4 @@ safetensors
 python-dotenv
 twstock
 matplotlib
+lxml

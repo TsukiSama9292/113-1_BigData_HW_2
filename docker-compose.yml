@@ -16,6 +16,13 @@ services:
       - ./ANNs:/workspace
     networks:
       network:
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: "all"
+            capabilities: [gpu]
 
 networks:
   network:
